@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>User Form</title>
+</head>
+
+<body style="background-color: #4e54c8;">
+    <%- include('header'); -%>
+
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        </div >
+        <div class="context">
+            <div class="dataForm">
+                <div class="col-lg-4 col-md-6 col-11 mainCon">
+                    <div class="center">
+                        <input class="custBTN mar5" type="button" value="Login" id="login">
+                        <input class="custBTN mar5 inactive" type="button" value="Signup" id="signup">
+                    </div>
+                    <form id="logSin" method="post" action="/api/login" >
+                        <div class="inputCon signup">
+                            <i class="fa-solid fa-user"></i>
+                            <input class="signupInput" type="text" placeholder="Full Name" name="name">
+                        </div>
+                        <div class="inputCon">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input required type="email" placeholder="Email" name="email" value="demo@gl01.cc" id="emailSer">
+                        </div>
+                        <div class="signup" id="errorMessE">
+                         </div>
+                        <div class="inputCon signup">
+                            <i class="fa-solid fa-users"></i>
+                            <input class="signupInput" type="text" placeholder="Username" name="username" id="usernameSer">
+                        </div>
+                        <div class="signup" id="errorMessU">
+                            <!-- <h6 style="color: rgb(163, 59, 59);"> <i class="fa-solid fa-thumbs-down"></i> Username already exist</h6>
+                            <h6 style="color: rgb(59, 163, 128);"> <i class="fa-solid fa-thumbs-up"></i> Username is free</h6> -->
+                         </div>
+                        <div class="inputCon">
+                            <i class="fa-solid fa-list"></i>
+                            <input required type="text" placeholder="Password" value="demo123" name="password">
+                        </div>
+                        <div class="inputCon signup" >
+                            <i class="fa-solid fa-list"></i>
+                            <input class="signupInput" type="text" placeholder="Confirm Password" name="password2">
+                        </div>
+                        <h5 class="info">
+                            Use email : demo@gl01.cc / password : demo123 for demo
+                        </h5>
+                        <div class="center">
+                            <input class="custBTN" type="submit" id="submitbtn" value="Login">
+                        </div>
+                    </form>
+                </div>
+               </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./js/from.js"></script>
+</body>
+</html>
